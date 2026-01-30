@@ -1,0 +1,30 @@
+# v0 runtime files (should only exist in preview, not in git)
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+instrumentation-client.js
+instrumentation-client.ts
+
+# Common ignores
+node_modules/
+.next/
+.pnpm-store/
+.env*.local
+.DS_Store
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Claude Code local settings (personal permissions)
+.claude/settings.local.json
+
+# Test app build artifacts
+tests/fixtures/apps/*/node_modules/
+tests/fixtures/apps/*/.next/
+tests/fixtures/apps/*/next-env.d.ts
+
+# Site build
+site/.next/
+site/node_modules/
+.vercel

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout - After</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .item {
+            background: white;
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .item-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .item:nth-child(1) .item-icon { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .item:nth-child(2) .item-icon { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .item:nth-child(3) .item-icon { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .item:nth-child(4) .item-icon { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .item:nth-child(5) .item-icon { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .item:nth-child(6) .item-icon { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+
+        .item-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-size: 1.125rem;
+        }
+
+        .item-text {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Layout Component</h1>
+        <p class="subtitle">After: Multi-column responsive grid</p>
+
+        <div class="grid">
+            <div class="item">
+                <div class="item-icon">📊</div>
+                <h3 class="item-title">Analytics</h3>
+                <p class="item-text">Track your metrics with beautiful dashboards and real-time updates.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-icon">🎨</div>
+                <h3 class="item-title">Design</h3>
+                <p class="item-text">Create stunning visuals with our intuitive design tools.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-icon">⚡</div>
+                <h3 class="item-title">Performance</h3>
+                <p class="item-text">Optimize speed and efficiency across all platforms.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-icon">🔒</div>
+                <h3 class="item-title">Security</h3>
+                <p class="item-text">Enterprise-grade protection for your sensitive data.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-icon">🚀</div>
+                <h3 class="item-title">Deploy</h3>
+                <p class="item-text">Ship to production with one-click deployment.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-icon">💬</div>
+                <h3 class="item-title">Support</h3>
+                <p class="item-text">Get help from our team whenever you need it.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

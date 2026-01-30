@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before & After Test Fixtures</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      background: white;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: #333;
+      color: white;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    tbody tr:hover {
+      background: #f9f9f9;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .scenario-name {
+      font-weight: 600;
+      color: #0066cc;
+    }
+
+    .description {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    a:hover {
+      background: #e6f2ff;
+    }
+
+    .command {
+      background: #f5f5f5;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      border-left: 3px solid #0066cc;
+    }
+
+    code {
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Before & After Test Fixtures</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%">Scenario</th>
+        <th style="width: 25%">Before</th>
+        <th style="width: 25%">After</th>
+        <th style="width: 25%">CLI Command</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="scenario-name">Theme Change</div>
+          <div class="description">Light theme vs Dark theme - full page comparison</div>
+        </td>
+        <td><a href="scenario-theme-change/before.html" target="_blank">View Before</a></td>
+        <td><a href="scenario-theme-change/after.html" target="_blank">View After</a></td>
+        <td><code>scenario-theme-change</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Accordion</div>
+          <div class="description">Accordion component with expandable sections</div>
+        </td>
+        <td><a href="accordion/before.html" target="_blank">View Before</a></td>
+        <td><a href="accordion/after.html" target="_blank">View After</a></td>
+        <td><code>accordion</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">CSS Card</div>
+          <div class="description">Card component style changes</div>
+        </td>
+        <td><a href="css-card/before.html" target="_blank">View Before</a></td>
+        <td><a href="css-card/after.html" target="_blank">View After</a></td>
+        <td><code>css-card</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Dialog Button</div>
+          <div class="description">Button with dialog/modal interaction</div>
+        </td>
+        <td><a href="dialog-button/before.html" target="_blank">View Before</a></td>
+        <td><a href="dialog-button/after.html" target="_blank">View After</a></td>
+        <td><code>dialog-button</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Inline Styles</div>
+          <div class="description">Elements with inline style changes</div>
+        </td>
+        <td><a href="inline-styles/before.html" target="_blank">View Before</a></td>
+        <td><a href="inline-styles/after.html" target="_blank">View After</a></td>
+        <td><code>inline-styles</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Responsive Layout</div>
+          <div class="description">Responsive design changes</div>
+        </td>
+        <td><a href="responsive-layout/before.html" target="_blank">View Before</a></td>
+        <td><a href="responsive-layout/after.html" target="_blank">View After</a></td>
+        <td><code>responsive-layout</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Tabbed Content</div>
+          <div class="description">Tab component with different content</div>
+        </td>
+        <td><a href="tabbed-content/before.html" target="_blank">View Before</a></td>
+        <td><a href="tabbed-content/after.html" target="_blank">View After</a></td>
+        <td><code>tabbed-content</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Tailwind Button</div>
+          <div class="description">Button with Tailwind CSS style changes</div>
+        </td>
+        <td><a href="tailwind-button/before.html" target="_blank">View Before</a></td>
+        <td><a href="tailwind-button/after.html" target="_blank">View After</a></td>
+        <td><code>tailwind-button</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Multi-page (Page 1)</div>
+          <div class="description">First page of multi-page site</div>
+        </td>
+        <td><a href="multi-page/page1-before.html" target="_blank">View Before</a></td>
+        <td><a href="multi-page/page1-after.html" target="_blank">View After</a></td>
+        <td><code>multi-page/page1</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Multi-page (Page 2)</div>
+          <div class="description">Second page of multi-page site</div>
+        </td>
+        <td><a href="multi-page/page2-before.html" target="_blank">View Before</a></td>
+        <td><a href="multi-page/page2-after.html" target="_blank">View After</a></td>
+        <td><code>multi-page/page2</code></td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="scenario-name">Identical Page</div>
+          <div class="description">Same page (should show no differences)</div>
+        </td>
+        <td><a href="identical/page.html" target="_blank">View Page</a></td>
+        <td><a href="identical/page.html" target="_blank">View Page</a></td>
+        <td><code>identical</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h2 style="margin-bottom: 1rem; color: #333;">📝 Usage</h2>
+    <p style="margin-bottom: 1rem; color: #666;">To capture screenshots for any scenario, use:</p>
+    <div class="command">
+      npx before-and-after \<br>
+      &nbsp;&nbsp;"file://$(pwd)/{scenario}/before.html" \<br>
+      &nbsp;&nbsp;"file://$(pwd)/{scenario}/after.html" \<br>
+      &nbsp;&nbsp;-c
+    </div>
+    <p style="margin-top: 1rem; color: #666;">Replace <code>{scenario}</code> with the scenario name from the table above.</p>
+  </div>
+</body>
+</html>

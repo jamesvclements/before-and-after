@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh; background: #f5f5f5; padding: 2rem;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .container { max-width: 600px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .accordion { text-align: left; }
+        .accordion-item { border: 1px solid #ddd; margin-bottom: -1px; }
+        .accordion-trigger {
+            width: 100%; padding: 1rem; border: none; background: white;
+            text-align: left; cursor: pointer; font-size: 0.875rem;
+            font-weight: 600; color: #333; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+        .accordion-trigger:hover { background: #f9fafb; }
+        .accordion-trigger .arrow { transition: transform 0.2s; }
+        .accordion-trigger.open .arrow { transform: rotate(180deg); }
+        .accordion-content {
+            display: none; padding: 1rem; background: white;
+            border-top: 1px solid #eee; color: #666; line-height: 1.6;
+        }
+        .accordion-content.open { display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAQ Section</h1>
+        <p class="subtitle">Click items to expand and see differences</p>
+
+        <div class="accordion" data-testid="accordion">
+            <div class="accordion-item" data-testid="accordion-item-1">
+                <button class="accordion-trigger" data-testid="trigger-return" onclick="toggleAccordion(this)">
+                    What is your return policy? <span class="arrow">&#x25BC;</span>
+                </button>
+                <!-- DIFFERENT: Updated return policy content -->
+                <div class="accordion-content" data-testid="content-return">
+                    We now offer a 60-day money-back guarantee on all purchases, no questions asked.
+                </div>
+            </div>
+            <div class="accordion-item" data-testid="accordion-item-2">
+                <button class="accordion-trigger" data-testid="trigger-support" onclick="toggleAccordion(this)">
+                    How do I contact support? <span class="arrow">&#x25BC;</span>
+                </button>
+                <!-- DIFFERENT: Updated support contact info -->
+                <div class="accordion-content" data-testid="content-support">
+                    Reach us at help@example.com or use live chat. Average response time under 2 minutes.
+                </div>
+            </div>
+            <div class="accordion-item" data-testid="accordion-item-3">
+                <button class="accordion-trigger" data-testid="trigger-teams" onclick="toggleAccordion(this)">
+                    Do you offer team plans? <span class="arrow">&#x25BC;</span>
+                </button>
+                <!-- DIFFERENT: Updated team plans info -->
+                <div class="accordion-content" data-testid="content-teams">
+                    Yes! Free for teams up to 5. Larger teams get volume discounts and dedicated support.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(trigger) {
+            const content = trigger.nextElementSibling;
+            const isOpen = content.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.accordion-trigger').forEach(t => t.classList.remove('open'));
+            // Toggle clicked
+            if (!isOpen) {
+                content.classList.add('open');
+                trigger.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

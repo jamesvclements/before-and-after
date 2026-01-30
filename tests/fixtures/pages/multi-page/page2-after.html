@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - After</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { min-height: 100vh; background: #fff; font-family: system-ui, sans-serif; }
+        .nav {
+            padding: 1rem 2rem; border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
+            background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .nav-brand {
+            font-weight: 800; font-size: 1.25rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a {
+            color: #64748b; text-decoration: none; font-size: 0.875rem;
+            font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #1e293b; }
+        .content { padding: 4rem 2rem; max-width: 640px; margin: 0 auto; }
+        .content h1 {
+            font-size: 2rem; color: #1e293b; margin-bottom: 1.5rem; font-weight: 800;
+        }
+        .content p { color: #475569; line-height: 1.7; margin-bottom: 1.25rem; font-size: 1.0625rem; }
+        .stats {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+            margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;
+        }
+        .stat { text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 800; color: #667eea; }
+        .stat-label { font-size: 0.875rem; color: #64748b; margin-top: 0.25rem; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">Acme Inc</div>
+        <div class="nav-links">
+            <a href="page1-after.html">Home</a>
+            <a href="page2-after.html" class="active">About</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>About Us</h1>
+        <p>Acme Inc was founded in 2020 with a mission to simplify team collaboration. We believe great tools should get out of your way.</p>
+        <p>Our team of 50 engineers works remotely across 12 countries to build the best tools for modern teams.</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Engineers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Countries</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">10K+</div>
+                <div class="stat-label">Teams</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

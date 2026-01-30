@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@layer base {
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 32%;
+    --muted: 0 0% 20%;
+    --border: 0 0% 88%;
+    --primary: 217 91% 60%;
+    --radius: 0.5rem;
+
+    /* Geist colors - 600 level (browser content) */
+    --geist-blue-600: hsl(208, 100%, 66%);
+    --geist-green-600: hsl(125, 60%, 64%);
+    --geist-purple-600: hsl(273, 72%, 73%);
+
+    /* Geist colors - 600 level (traffic lights) */
+    --geist-red-600: hsl(359, 90%, 71%);
+    --geist-amber-600: hsl(36, 90%, 62%);
+    /* green-600 already defined above */
+
+    /* Geist colors - PR header */
+    --geist-blue-300: hsl(210, 100%, 94%);
+    --geist-blue-500: hsl(209, 100%, 80%);
+
+    /* Folder colors */
+    --folder-back-top: #5AB4E5;
+    --folder-back-mid: #4AA3D7;
+    --folder-back-bottom: #3A8FC3;
+    --folder-front-top: #8FDFFC;
+    --folder-front-mid: #7AD5F7;
+    --folder-front-mid2: #64CBF0;
+    --folder-front-bottom: #4ABEEA;
+    --folder-circle-top: #52A9D5;
+    --folder-circle-bottom: #4496C2;
+    --folder-highlight: #6CCBEF;
+    --folder-arrow: #A0DEFA;
+  }
+
+  /* P3 color support */
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      /* Geist 600 in P3 (browser content) */
+      --geist-blue-600: color(display-p3 0.31 0.68 1.0);
+      --geist-green-600: color(display-p3 0.42 0.82 0.46);
+      --geist-purple-600: color(display-p3 0.68 0.53 0.90);
+
+      /* Geist 600 in P3 (traffic lights) */
+      --geist-red-600: color(display-p3 0.95 0.45 0.45);
+      --geist-amber-600: color(display-p3 0.95 0.68 0.35);
+      /* green-600 already defined above */
+
+      /* Geist PR header in P3 */
+      --geist-blue-300: color(display-p3 0.88 0.95 1.0);
+      --geist-blue-500: color(display-p3 0.6 0.82 1.0);
+
+      /* Folder colors in P3 - enhanced vibrancy */
+      --folder-back-top: color(display-p3 0.35 0.71 0.90);
+      --folder-back-mid: color(display-p3 0.29 0.64 0.84);
+      --folder-back-bottom: color(display-p3 0.23 0.56 0.76);
+      --folder-front-top: color(display-p3 0.56 0.87 0.99);
+      --folder-front-mid: color(display-p3 0.48 0.84 0.97);
+      --folder-front-mid2: color(display-p3 0.39 0.80 0.94);
+      --folder-front-bottom: color(display-p3 0.29 0.75 0.92);
+      --folder-circle-top: color(display-p3 0.32 0.66 0.84);
+      --folder-circle-bottom: color(display-p3 0.27 0.59 0.76);
+      --folder-highlight: color(display-p3 0.42 0.80 0.94);
+      --folder-arrow: color(display-p3 0.63 0.87 0.98);
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-gray-600 antialiased;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  code, pre {
+    font-size: 15px;
+  }
+}

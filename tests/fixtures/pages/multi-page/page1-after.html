@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - After</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { min-height: 100vh; background: #fff; font-family: system-ui, sans-serif; }
+        .nav {
+            padding: 1rem 2rem; border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
+            background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .nav-brand {
+            font-weight: 800; font-size: 1.25rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a {
+            color: #64748b; text-decoration: none; font-size: 0.875rem;
+            font-weight: 500; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #1e293b; }
+        .hero {
+            padding: 6rem 2rem; text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1.25rem; font-weight: 800; }
+        .hero p { color: rgba(255,255,255,0.85); max-width: 540px; margin: 0 auto; font-size: 1.125rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">Acme Inc</div>
+        <div class="nav-links">
+            <a href="page1-after.html" class="active">Home</a>
+            <a href="page2-after.html">About</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Welcome to Acme</h1>
+        <p>We build tools that help teams work better together. Join thousands of teams shipping faster.</p>
+    </section>
+</body>
+</html>

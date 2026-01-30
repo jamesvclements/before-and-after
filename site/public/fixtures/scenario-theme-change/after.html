@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Test - Dark</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 2rem;
+    }
+    section[data-testid="nav"] {
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+      margin-bottom: 2rem;
+    }
+    section[data-testid="hero"] {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #2a2a2a;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    section[data-testid="features"] {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .feature-card {
+      padding: 1.5rem;
+      background: #2a2a2a;
+      border-radius: 4px;
+      border: 1px solid #404040;
+    }
+    section[data-testid="pricing"] {
+      padding: 2rem;
+      background: #2a2a2a;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <section data-testid="nav">
+    <h3>Logo</h3>
+  </section>
+
+  <section data-testid="hero">
+    <h1>Build something amazing</h1>
+    <p>Dark theme design</p>
+  </section>
+
+  <section data-testid="features">
+    <div class="feature-card">
+      <h3>Feature 1</h3>
+      <p>New Description</p>
+    </div>
+    <div class="feature-card">
+      <h3>Feature 2</h3>
+      <p>New Description</p>
+    </div>
+    <div class="feature-card">
+      <h3>Feature 3</h3>
+      <p>New Description</p>
+    </div>
+  </section>
+
+  <section data-testid="pricing">
+    <h2>Pricing</h2>
+    <p>$149/month</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "name": "@jamesvclements/before-and-after",
+  "version": "0.0.1",
+  "description": "Simple before/after screenshot tool for capturing and comparing web pages",
+  "author": "James Clements",
+  "license": "PolyForm-Shield-1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesvclements/before-and-after.git"
+  },
+  "homepage": "https://github.com/jamesvclements/before-and-after#readme",
+  "bugs": {
+    "url": "https://github.com/jamesvclements/before-and-after/issues"
+  },
+  "keywords": [
+    "screenshot",
+    "before-after",
+    "visual-diff",
+    "comparison",
+    "capture",
+    "web",
+    "testing",
+    "cli"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "before-and-after": "dist/bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "skill"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.pkg.json",
+    "prepublishOnly": "rm -rf dist && pnpm build && pnpm test:unit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:browser": "vitest run tests/browser",
+    "test:integration": "vitest run tests/integration"
+  },
+  "peerDependencies": {
+    "agent-browser": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "5.7.3",
+    "vitest": "^3.2.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.7",
+      "@types/react-dom": "19.2.3"
+    }
+  }
+}

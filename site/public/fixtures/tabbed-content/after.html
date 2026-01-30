@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh; background: #f5f5f5; padding: 2rem;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .container { max-width: 600px; margin: 0 auto; text-align: center; }
+        h1 { font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .tabs { display: flex; border-bottom: 1px solid #ddd; margin-bottom: 1rem; }
+        .tab {
+            padding: 0.75rem 1.5rem; cursor: pointer; border: none;
+            background: none; font-size: 0.875rem; color: #666;
+            border-bottom: 2px solid transparent;
+        }
+        .tab.active { color: #3b82f6; border-bottom-color: #3b82f6; font-weight: 600; }
+        .tab-panel { display: none; text-align: left; padding: 1rem; background: white; border: 1px solid #ddd; }
+        .tab-panel.active { display: block; }
+        .tab-panel h3 { margin-bottom: 0.5rem; }
+        .tab-panel p { color: #666; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tab Component</h1>
+        <p class="subtitle">Switch tabs to see content differences</p>
+
+        <div class="tabs" data-testid="tabs">
+            <button class="tab active" data-testid="tab-overview" onclick="switchTab(0)">Overview</button>
+            <button class="tab" data-testid="tab-features" onclick="switchTab(1)">Features</button>
+            <button class="tab" data-testid="tab-pricing" onclick="switchTab(2)">Pricing</button>
+        </div>
+
+        <!-- Overview tab is identical in both before/after -->
+        <div class="tab-panel active" id="panel-0" data-testid="panel-overview">
+            <h3>Overview</h3>
+            <p>Welcome to our product overview. This section provides a general introduction to what we offer.</p>
+        </div>
+
+        <!-- DIFFERENT: Features tab content updated -->
+        <div class="tab-panel" id="panel-1" data-testid="panel-features">
+            <h3>Features</h3>
+            <p>Our product includes advanced AI-powered features with real-time collaboration and intelligent suggestions.</p>
+        </div>
+
+        <!-- DIFFERENT: Pricing tab content updated -->
+        <div class="tab-panel" id="panel-2" data-testid="panel-pricing">
+            <h3>Pricing</h3>
+            <p>Free for individuals. Teams start at $29/month with unlimited seats.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(index) {
+            document.querySelectorAll('.tab').forEach((t, i) => {
+                t.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.tab-panel').forEach((p, i) => {
+                p.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+</body>
+</html>

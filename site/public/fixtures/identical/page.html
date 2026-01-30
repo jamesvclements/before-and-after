@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identical Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh; background: #f5f5f5;
+            display: flex; align-items: center; justify-content: center;
+            font-family: system-ui, -apple-system, sans-serif; padding: 2rem;
+        }
+        .container { text-align: center; }
+        h1 { font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        p { color: #666; }
+        .card {
+            background: white; border: 1px solid #ddd; padding: 1.5rem;
+            width: 300px; margin-top: 1.5rem; text-align: left;
+        }
+        .card h2 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+        .card p { line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Static Page</h1>
+        <p>This page is used to test identical comparison (no changes expected)</p>
+        <div class="card">
+            <h2>Content Card</h2>
+            <p>This content should be identical in both before and after captures.</p>
+        </div>
+    </div>
+</body>
+</html>

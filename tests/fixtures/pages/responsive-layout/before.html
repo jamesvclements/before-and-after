@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout - Before</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f5f5f5;
+            padding: 2rem;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-text {
+            color: #666;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Layout Component</h1>
+        <p class="subtitle">Before: Single column layout</p>
+
+        <div class="item">
+            <h3 class="item-title">Item 1</h3>
+            <p class="item-text">This is the first item in a single-column layout.</p>
+        </div>
+
+        <div class="item">
+            <h3 class="item-title">Item 2</h3>
+            <p class="item-text">This is the second item stacked vertically.</p>
+        </div>
+
+        <div class="item">
+            <h3 class="item-title">Item 3</h3>
+            <p class="item-text">This is the third item in the column.</p>
+        </div>
+
+        <div class="item">
+            <h3 class="item-title">Item 4</h3>
+            <p class="item-text">This is the fourth item at the bottom.</p>
+        </div>
+
+        <div class="item">
+            <h3 class="item-title">Item 5</h3>
+            <p class="item-text">This is the fifth item.</p>
+        </div>
+
+        <div class="item">
+            <h3 class="item-title">Item 6</h3>
+            <p class="item-text">This is the sixth item.</p>
+        </div>
+    </div>
+</body>
+</html>
